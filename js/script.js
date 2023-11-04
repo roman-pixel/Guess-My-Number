@@ -13,7 +13,7 @@ document.querySelector(".check").addEventListener("click", function () {
 
   // no input
   if (!guess) {
-    displayMessage("⛔️ No number!");
+    displayMessage("No number!");
 
     // win
   } else if (guess === secretNumber) {
@@ -29,11 +29,11 @@ document.querySelector(".check").addEventListener("click", function () {
     // guess is wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      displayMessage(guess > secretNumber ? "📈 Too high!" : "📉 Too low!");
+      displayMessage(guess > secretNumber ? "Too high!" : "Too low!");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
-      displayMessage("😢 You lost the game!");
+      displayMessage("You lost the game!");
       score = 0;
       document.querySelector(".score").textContent = score;
       document.querySelector(".number").textContent = secretNumber;
